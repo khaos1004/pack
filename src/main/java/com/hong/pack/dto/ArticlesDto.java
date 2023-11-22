@@ -1,5 +1,7 @@
 package com.hong.pack.dto;
 
+import com.hong.pack.entity.Article;
+
 public class ArticlesDto {
     private String title;
     private String content;
@@ -15,5 +17,9 @@ public class ArticlesDto {
     public ArticlesDto(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public Article toEntity() {
+        return new Article(null, title, content);
     }
 }
