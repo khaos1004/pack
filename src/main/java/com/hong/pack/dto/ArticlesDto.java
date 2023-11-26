@@ -1,11 +1,15 @@
 package com.hong.pack.dto;
 
 import com.hong.pack.entity.Article;
-import lombok.AllArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
+@Slf4j
 @ToString
+@NoArgsConstructor
+@Setter
+@Getter
 public class ArticlesDto {
     private String title;
     private String content;
