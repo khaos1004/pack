@@ -29,15 +29,13 @@ public class ArticleController {
         log.info("id= " + id);
 
         //1. id 로 데이터를 가져옴
-        Optional<Article> articleEntity = articleRepository.findById(id);
-//        Article articledata = articleRepository.findById(id).orElse(null);// 값이없으면 nuul값 반환 위에꺼랑 같음
+//        Optional<Article> articleEntity = articleRepository.findById(id);
+        Article articledata = articleRepository.findById(id).orElse(null);// 값이없으면 null값 반환
 
         //2. 가져온 데이터를 모델에 등록
-        model.addAttribute("article", articleEntity);
+        model.addAttribute("article", articledata);
 
         //3. 데이터를 페이지에 보여줌
-
-
         return "articles/show";
     }
 
