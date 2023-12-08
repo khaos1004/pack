@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 public class Article {
 
+    public String getId;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
